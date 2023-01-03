@@ -3,16 +3,16 @@
     "subtitle": "\"Belajar itu harus. Pintar itu bonus.\" - Irwansyah Saputra (https://irw.one/)",
     "menu": [
         {
-            "title": "read more here",
+            "title": "link terkait",
             "entries": [
                 {
-                    "title": "github",
-                    "url": "http://github.com/stopnoanime/11ty-no-style-please"
+                    "title": "tentang saya",
+                    "url": "./about/"
                 }
             ]
         },
         {
-            "title": "all posts with the 'post' tag",
+            "title": "tulisan saya",
             "post_list": "post"
         }
     ]

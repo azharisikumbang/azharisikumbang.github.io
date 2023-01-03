@@ -1,0 +1,29 @@
+---
+layout: base.njk
+permalink: /about/
+---
+<header>
+    <h1>{{ homepage.title or site.title }}</h1>
+
+    {% set subtitle = homepage.subtitle%}
+    {% if subtitle %}
+        <p>{{ subtitle }}</p>
+    {% endif %}
+</header>
+<main>
+    <hr>
+    <div>Seorang pemuda yang sedang mendalami jaringan komputer dan kode. Memiliki obsesi pada automasi dan penerapannya dalam keseharian. Dan berkeinginan untuk terlibat pada proyek open source. </div>
+    <div>
+        - ketertarikan: linux, cisco, mikrotik<br>
+        - bahasa: bash, python, rust<br>
+        - sertifikasi: 
+            <a href="https://mikrotik.com/training/certificates/c119971c43428b68594d" target="_blank">mtcna</a>, 
+            <a href="https://mikrotik.com/training/certificates/c120191cacc6bf07f22d" target="_blank">mtctce</a>, 
+            <a href="https://www.credential.net/1a5df580-e82a-4244-980a-cbae7fbebf0d" target="_blank">ace</a>
+        <br>
+        - temukan: 
+            <a href="{{ about.telegram }}" target="_blank">telegram</a> / 
+            <a href="{{ about.linkedin }}" target="_blank">linkedin</a> / 
+            <a href="https://github.com/azharisikumbang" target="_blank">github</a>
+    </div>
+</main>
