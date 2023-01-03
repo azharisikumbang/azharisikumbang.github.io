@@ -1,7 +1,7 @@
 {
-    "title": "11ty no style please",
-    "description": "demo of a page made with 11ty-no-style-please",
-    "language": "en",
-    "back_home_text": "..",
-    "url": "https://11ty-no-style-please.netlify.com"
+    "title": "Blog - Azhari Saputra",
+    "description": "Sekedar catatan keseharian dalam berteknologi.",
+    "language": "id",
+    "back_home_text": "./kembali",
+    "url": "https://azharisaputra.com"
 }
