@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Eleventy v1.0.2">
+    
+    
+    <meta name="description" content="Sekedar catatan keseharian dalam berteknologi.">
+    
+    <title>Mengatasi Error UUID Already Exists Di Virtual Box</title>
+
+    <link rel="stylesheet" href="/css/css.css"> 
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRF181NEQ3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-JRF181NEQ3');
+    </script>
+</head>
+<body>
+    <a href="/">./kembali</a>
+
+<article>
+  <p class="post-meta">
+    <time datetime="Fri Mar 29 2019 00:00:00 GMT+0000 (Coordinated Universal Time)">29/3</time>
+  </p>
+  
+  <h1>Mengatasi Error UUID Already Exists Di Virtual Box</h1>
+  
+  <!--kg-card-begin: html-->
+<p>Masalah ini akan sering kita jumpai ketika kita ingin menggunakan satu buah virtual hard drive (vhd atau ekstensi lainnya seperti vdi) ke dalam dua buah Virtual Machine. </p>
+<p>Kesalahan ini muncul karena virtual box mendeteksi bahwa virtual hard drive yang akan kita gunakan, sebelumnya telah terdaftar di mesin kita. Oleh karena itu, kita butuh mendaftarkan ulang untuk mendapatkan indentitas nya sendiri, yaitu UUID baru.</p>
+<p>Sebelumnya, apasih UUID ? UUID atau Universal Unique Identifier merupakan deretan angka dan huruf yang tersusun acak yang terdiri dari 128-bit yang diperuntukkan sebagai pengidntifikasi untuk setiap virtual mchine.</p>
+<p>Sebenarnya ada cara mudah untuk mengatasi ini, yaitu dengan menghapus virtual machine (vm) sebelumnya. Ya, tentu itu bisa saja, tapi kasusnya kita ingin tetap punya kedua virtual machine itu berjalan.</p>
+<p>Berikut cara merubah UUID di virtual box&#8230;</p>
+<h3><strong>Langkah #1 : Buka Command Prompt (jika windows)</strong></h3>
+<h3>Langkah #2: Masuk ke direktori virtualbox</h3>
+<p>Setelh membuka cmd, sekarang kita pindah ke direktori virtualbox diinstall. Secara default windows, virtual box terinstal di <mark>C:\Program Files\Oracle\VirtualBox</mark></p>
+<pre class="wp-block-preformatted">cd C:\Program Files\Oracle\VirtualBox</pre>
+<h3>Langkah #3: Mendaftar UUID baru dengan VBOXMANAGE.EXE</h3>
+<p>Selanjutnya, kita akan mendaftar UUID baru untuk virtual machine baru kita, cara dengan perintah</p>
+<pre class="wp-block-preformatted">VBOXMANAGE.EXE internalcommands sethduuid “pathfilevhd”</pre>
+<p>Dimana &#8220;pathfilevhd&#8221; merupakan lokasi dari vhd yang akan kita gunakan. Disini loksi vhd saya di <mark>D:\vbox\ubuntu16_2.vdi</mark> silahkan di sesuaikan.</p>
+<blockquote class="wp-block-quote"><p>Jika muncu error silahkan coba tanpa tanda petik, karena pada beberapa versi terkadang tidak membutuhkan tanda petik</p></blockquote>
+<pre class="wp-block-preformatted">VBOXMANAGE.EXE internalcommands sethduuid “D:\vbox\ubuntu16_2.vdi”</pre>
+<h3>Langkah #4: Uji coba virtual machine</h3>
+<p>Silahkan buat virtual machine baru di virtualbox dengan menggunakan VHD (atau ekstensi lainnya) yang baru di setting tadi.</p>
+<p>Sekian dan semoga bermanfaat.</p>
+<!--kg-card-end: html-->
+
+</article>
+    <div style="margin-top: 22px">
+        &copy; 2023 - 
+        Powered by <a href="https://www.11ty.dev">11ty.dev</a> - 
+        Theme by <a href="https://github.com/stopnoanime/11ty-no-style-please">11ty-no-style-please</a>
+    </div>
+</body>
+</html>

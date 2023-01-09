@@ -7,6 +7,11 @@ html {
     font-family: monospace;
 }
 
+h1 a {
+    color: #1d1d1d;
+    text-decoration: none;
+}
+
 h1,h2,h3,h4,h5,h6 {
     margin: 2em 0 1em;
 }
@@ -41,8 +46,28 @@ pre {
     padding: 1rem;
 }
 
-pre, code {
-    background: #e0e0e0;
+pre {
+    background: #333;
+    white-space: pre;
+    word-wrap: break-word;
+    overflow: auto;
+    font-family: "Inconsolata","Monaco","Consolas","Andale Mono","Bitstream Vera Sans Mono","Courier New",Courier,monospace;
+    display: block;
+    padding: 15px 16px 14px;
+    overflow-x: auto;
+    font-size: 13px;
+    line-height: 19px;
+    color: #ddd;
+    border-radius: 6px;
+}
+
+p > code {
+    background: #333;
+    font-family: "Inconsolata","Monaco","Consolas","Andale Mono","Bitstream Vera Sans Mono","Courier New",Courier,monospace;
+    color: #ddd;
+    font-size: small;
+    padding: 4px 8px;
+    border-radius: 6px;
 }
 
 table { width: 100%; }

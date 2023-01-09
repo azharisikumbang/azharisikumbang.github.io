@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Eleventy v1.0.2">
+    
+    
+    <meta name="description" content="Sekedar catatan keseharian dalam berteknologi.">
+    
+    <title>Cara Mudah Menggabungkan Beberapa Video Dengan VLC Media Player</title>
+
+    <link rel="stylesheet" href="/css/css.css"> 
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRF181NEQ3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-JRF181NEQ3');
+    </script>
+</head>
+<body>
+    <a href="/">./kembali</a>
+
+<article>
+  <p class="post-meta">
+    <time datetime="Wed Jan 27 2021 00:00:00 GMT+0000 (Coordinated Universal Time)">27/1</time>
+  </p>
+  
+  <h1>Cara Mudah Menggabungkan Beberapa Video Dengan VLC Media Player</h1>
+  
+  <!--kg-card-begin: html-->
+<p>Tutorial ini akan sedikit sederhana, dimana ada beberapa video yang ingin digabungkan menjadi satu video saja. Untuk melakukan itu, bisa saja dengan software editor video yang sudah banyak bertebaran.<br>Tapi, berhubung laptop saya kentang dan saya internet speed yang mirip keong untuk download software editing video <em>(curhat)</em>, jadi sedikit putar otak dan saya baru tau juga bahwa vlc video player bisa digunakan untuk menggabungkan beberapa video menjadi satu video saja.</p>
+<p>Caranya cukup mudah, cukup buka command line nya windows,</p>
+<pre class="wp-block-preformatted">C:\Users\Win&gt;</pre>
+<p>Kemudian masuk ke direktori lokasi video yang kita akan gabungkan, sebagai contoh video saya ada di <code>D:\Videos</code></p>
+<pre class="wp-block-preformatted">C:\Users\Win&gt;D:<br>D:&gt;cd Videos<br>D:\Videos&gt;</pre>
+<p>Untuk melakukan penggabungkan, pastikan sudah terinstall vlc media player, jika belum silahkan download dan install saja.</p>
+<p>Baca Juga : <a href="https://coretanit.com/cara-membuat-loopback-interface-adapter-windows-7/" target="_blank" rel="noreferrer noopener">Cara Membuat Loopback Interface Adapter Windows 7</a></p>
+<p>Secara default lokasi excutable vlc kita ada di <code>"%PROGRAMFILES%\VideoLAN\VLC\vlc.exe"</code>, jika berbeda silahkan disesuaikan</p>
+<p>Disini terdapat 3 video, yaitu <code>pembukaan.mp4</code>, <code>isi.mp4</code>, <code>penutup.mp4</code> dan akan digabunggakan menjadi <code>final.mp4</code></p>
+<pre class="wp-block-preformatted">D:\Videos>"%PROGRAMFILES%\VideoLAN\VLC\vlc.exe" -vv <span class="has-inline-color has-vivid-red-color">pembukaan.mp4 isi.mp4 penutup.mp4</span> --sout-keep -- sout=#gather:transcode{vcodec=h264,vb=1024,scale=1,acodec=mp4a,ab=192,channels=6}:standard{access=file,mux=ts,dst=<span class="has-inline-color has-vivid-red-color">final.mp4</span>}</pre>
+<p>Saat kita eksekusi, seharusnya aplikasi vlc kita akan terbuka, dan proses penggabungan akan dijalankan, cukup tunggu saja, seduh kopi dan scroll tiktok.</p>
+<p>Untuk pengertian setiap parameter dan config yang dimasukkan diabaikan saja, cukup perhatikan file yang akan digabunggkan, dan hasil pada parameter <code>dst=final.mp4</code></p>
+<p>Untuk lebih lengkapnya silahkan cek <a href="https://wiki.videolan.org/" target="_blank" rel="noreferrer noopener">wiki </a>dan <a href="https://wiki.videolan.org/Documentation:Documentation" target="_blank" rel="noreferrer noopener">dokumentasi</a> dari vlc.</p>
+<p>Selain mp4, penggabungan juga bisa dilakukan terhadap file mp4, mkv dan sebagainya, tinggal menyesuaikan transcode nya</p>
+<p>Sekian, dan terima gaji.</p>
+<!--kg-card-end: html-->
+
+</article>
+    <div style="margin-top: 22px">
+        &copy; 2023 - 
+        Powered by <a href="https://www.11ty.dev">11ty.dev</a> - 
+        Theme by <a href="https://github.com/stopnoanime/11ty-no-style-please">11ty-no-style-please</a>
+    </div>
+</body>
+</html>
