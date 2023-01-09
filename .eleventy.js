@@ -6,7 +6,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("media");
 
     eleventyConfig.addFilter("formatDate", (dateObj) => {
-        return DateTime.fromJSDate(dateObj).toISODate();
+        return `${dateObj.getDate()}\/${dateObj.getMonth() + 1}`;
     });     
 
     let markdownOptions = {

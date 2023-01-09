@@ -1,19 +1,11 @@
 {
     "title": "azharisaputra.com",
+    "show_subtitle": true,
     "subtitle": "\"Belajar itu harus. Pintar itu bonus.\" - Irwansyah Saputra (https://irw.one/)",
     "menu": [
         {
-            "title": "link terkait",
-            "entries": [
-                {
-                    "title": "tentang saya",
-                    "url": "./about/"
-                }
-            ]
-        },
-        {
             "title": "tulisan saya",
-            "post_list": "post"
+            "post_list": "posts"
         }
     ]
 }

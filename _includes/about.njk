@@ -3,11 +3,15 @@ layout: base.njk
 permalink: /about/
 ---
 <header>
-    <h1>{{ homepage.title or site.title }}</h1>
+    <h1>
+        <a href="{{ site.url }}">{{ homepage.title or site.title }}</a> - tentang
+    </h1>
 
-    {% set subtitle = homepage.subtitle%}
-    {% if subtitle %}
-        <p>{{ subtitle }}</p>
+    {% if homepage.show_subtitle %}
+        {% set subtitle = homepage.subtitle %}
+        {% if subtitle %}
+            <p>{{ subtitle }}</p>
+        {% endif %}
     {% endif %}
 </header>
 <main>
