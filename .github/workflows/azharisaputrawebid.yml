@@ -30,12 +30,13 @@ jobs:
           npm run build
 
       - name: Upload files
-        uses: SamKirkland/FTP-Deploy-Action@master
+        uses: SamKirkland/FTP-Deploy-Action@4.3.5
         with:
-          ftp-server: ${{ secrets.REMOTE_HOST }}
-          ftp-username: ${{ secrets.REMOTE_USER }}
-          ftp-password: ${{ secrets.REMOTE_PASSWORD }}
+          server: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          password: ${{ secrets.REMOTE_PASSWORD }}
           local-dir: "_site/"
+          server-dir: "${{ secrets.REMOTE_DIR }}"
 
       # # Copying files and artifacts via SSH
       # - name: Copying files to server
