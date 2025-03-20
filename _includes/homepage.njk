@@ -21,11 +21,9 @@ layout: base.njk
 </header>
 <main>
     <hr>
-        <strong>Info:</strong> 
-        <a href="https://medium.com/@azhari0">Blog pindah kesini</a>
+    {% set medium_entries = medium %}
+    {% include "medium.njk" %}
 
-    <br>
-    
     {% set entries = homepage.menu %}
     {% include "menu.njk" %}
 </main>

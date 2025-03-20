@@ -1,9 +1,57 @@
 {
-  "title": "Azhari Saputra - Personal Blog",
-  "description": "Sekedar catatan keseharian dalam berteknologi.",
-  "language": "id",
-  "back_home_text": "./kembali",
-  "url": "",
-  "theme_url": "https://github.com/stopnoanime/11ty-no-style-please",
-  "theme_name": "11ty-no-style-please"
+  "url": "https://azhari0.medium.com",
+  "items": [
+    {
+      "year": 2025,
+      "posts": [
+        {
+          "title": "Dikala Ingin Menulis Kode",
+          "url": "https://medium.com/kafekoding/dikala-ingin-menulis-kode-209936294ff9",
+          "post_date": "8/3",
+          "post_year": "2025",
+          "post_fulldate": "2025-03-08"
+        }
+      ]
+    },
+    {
+      "year": 2023,
+      "posts": [
+        {
+          "title": "Bagaimana Seharusnya Sosial Media Diperlakuan: Pendekatan Sederhana",
+          "url": "https://azhari0.medium.com/bagaimana-seharusnya-sosial-media-diperlakuan-sehuah-pendekatan-pribadi-9edc12b3a793",
+          "post_date": "12/21",
+          "post_year": "2023",
+          "post_fulldate": "2023-12-21"
+        },
+        {
+          "title": "Pengelolaan Roles dan Permissions di Laravel dengan Spatie Permissions",
+          "url": "https://medium.com/kafekoding/pengelolaan-roles-dan-permissions-di-laravel-dengan-spatie-permissions-5d9bc8b9cbca",
+          "post_date": "12/20",
+          "post_year": "2023",
+          "post_fulldate": "2023-12-20"
+        },
+        {
+          "title": "Bagaimana Paginasi Dalam Tabel Bereleasi Pada MySQL",
+          "url": "https://medium.com/kafekoding/ketika-perangkat-lunak-sudah-mulai-kompleks-secara-linear-basis-data-juga-akan-ikut-menjadi-e967cc5b22c4",
+          "post_date": "12/16",
+          "post_year": "2023",
+          "post_fulldate": "2023-12-16"
+        },
+        {
+          "title": "Belajar Transaksi Dalam Basis Data",
+          "url": "https://medium.com/kafekoding/belajar-transaksi-dalam-f65a7f0a1c1c",
+          "post_date": "12/16",
+          "post_year": "2023",
+          "post_fulldate": "2023-12-16"
+        },
+        {
+          "title": "Ubuntu, Secure Boot dan VirtualBox",
+          "url": "https://medium.com/kafekoding/ubuntu-secure-boot-dan-virtualbox-77cb686c3016",
+          "post_date": "12/16",
+          "post_year": "2023",
+          "post_fulldate": "2023-12-16"
+        }
+      ]
+    }
+  ]
 }

@@ -1,0 +1,11 @@
+{% for items in medium_entries.items %}
+    <ul>
+        <h2 style="margin:1rem -2rem">{{ items.year }}</h2>
+        {% for entry in items.posts %}
+        <li>
+            <a href="{{ entry.url }}" target="_blank">{{ entry.title }}</a>
+            <time datetime="{{ entry.post_fulldate }}">({{ entry.post_date }})</time>
+        </li>
+        {% endfor %}
+    </ul>
+{% endfor %}
