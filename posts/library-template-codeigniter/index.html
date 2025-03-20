@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Eleventy v1.0.2">
+    <meta name="generator" content="Eleventy v3.0.0">
     
     
     <meta name="description" content="Sekedar catatan keseharian dalam berteknologi.">
@@ -38,17 +38,15 @@
 <pre>&lt;?php
 class Template {
     public $template_data = [];
-<pre><code>function set($name, $value){
-    $this-&amp;gt;template_data[$name] = $value;
-}
-
-function load($template = '', $view = '', $data = [], $return = FALSE){
-    $this-&amp;gt;CI =&amp;amp; get_instance();
-    $this-&amp;gt;set('contents', $this-&amp;gt;CI-&amp;gt;load-&amp;gt;view($view, $data, TRUE));
-    return $this-&amp;gt;CI-&amp;gt;load-&amp;gt;view($template, $this-&amp;gt;template_data, $return);
-}
-</code></pre>
-<p>}</p>
+<p>function set($name, $value){<br>
+$this-&gt;template_data[$name] = $value;<br>
+}</p>
+<p>function load($template = '', $view = '', $data = [], $return = FALSE){<br>
+$this-&gt;CI =&amp; get_instance();<br>
+$this-&gt;set('contents', $this-&gt;CI-&gt;load-&gt;view($view, $data, TRUE));<br>
+return $this-&gt;CI-&gt;load-&gt;view($template, $this-&gt;template_data, $return);<br>
+}<br>
+}</p>
 <p>?&gt;</pre></p>
 <h3>Instalasi Template</h3>
 <p>Pertama, pastikan anda sudah menginstall Codeigniter di projek anda.. (yaiyalah)</p>
@@ -70,16 +68,14 @@ function load($template = '', $view = '', $data = [], $return = FALSE){
 &lt;body&gt;
     &lt;!-- Bagian Header (Pembuka) dari template --&gt;
     &lt;h1&gt;Selamat Datang&lt;/h1&gt;
-<pre><code>&amp;lt;!-- Bagian pembuka file view (yang akan dinamis) --&amp;gt;
-&amp;lt;?php echo $contents ?&amp;gt;
-&amp;lt;!-- Bagian penitup file view --&amp;gt;
-
-&amp;lt;!-- Bagian Footer (Penutup) dari template --&amp;gt;
-&amp;lt;div&amp;gt;
-    Copyright azharisaputra.com
-&amp;lt;/div&amp;gt;
-</code></pre>
-<p>&lt;/body&gt;<br>
+<p>&lt;!-- Bagian pembuka file view (yang akan dinamis) --&gt;<br>
+&lt;?php echo $contents ?&gt;<br>
+&lt;!-- Bagian penitup file view --&gt;</p>
+<p>&lt;!-- Bagian Footer (Penutup) dari template --&gt;<br>
+&lt;div&gt;<br>
+Copyright <a href="http://azharisaputra.com">azharisaputra.com</a><br>
+&lt;/div&gt;<br>
+&lt;/body&gt;<br>
 &lt;/html&gt;</pre></p>
 <h3>Membuat File View</h3>
 <p>Nah, untuk konten view akan kita coba dua file view (view1.php dan view2.php)</p>
@@ -100,15 +96,12 @@ function load($template = '', $view = '', $data = [], $return = FALSE){
 <p>Tambahkan file baru di <em>application/controller/Blog.php&nbsp;</em>dan ketikkan kode berikut</p>
 <pre>&lt;?php
 class Blog extends CI_Controller{
-<pre><code>public function satu(){
-  $this-&amp;gt;template-&amp;gt;load('&lt;strong&gt;template&lt;/strong&gt;','&lt;strong&gt;view1&lt;/strong&gt;');
-}
-
-public function dua(){
-    $this-&amp;gt;template-&amp;gt;load('&lt;strong&gt;template&lt;/strong&gt;','&lt;strong&gt;view2&lt;/strong&gt;');
-
-}
-</code></pre>
+<p>public function satu(){<br>
+$this-&gt;template-&gt;load('<strong>template</strong>','<strong>view1</strong>');<br>
+}</p>
+<p>public function dua(){<br>
+$this-&gt;template-&gt;load('<strong>template</strong>','<strong>view2</strong>');</p>
+<p>}</p>
 <p>}</pre></p>
 <p>Kemudian simpan.</p>
 <p>Hasilnya silahkan cek dibrowser anda masing masing (url sesuaikan)</p>
