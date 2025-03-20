@@ -1,0 +1,43 @@
+---
+layout: base.njk
+permalink: /project/
+---
+<header>
+    <h1>
+        <a href="{{ site.url }}/project">{{ project.title or site.title }}</a>
+    </h1>
+
+    {% if project.show_subtitle %}
+        {% set subtitle = project.subtitle %}
+        {% if subtitle %}
+            <p>{{ subtitle }}</p>
+        {% endif %}
+    {% else %}
+    <div id="nav">
+        <a href="{{ site.url }}/">beranda</a> -
+        <a href="{{ site.url }}/project/">project</a> -
+        <a href="{{ site.url }}/about/">tentang saya</a>
+    </div>
+    {% endif %}
+</header>
+<main>
+    <hr>
+    
+    {% for entry in project.items %}
+        <article style="border-bottom: 1px solid rgb(187, 187, 187); margin: 14px 0; padding: 14px 0">
+            <div>
+                <a href="{{ entry.detail_url }}" style="font-weight: bold; font-size: 22px">{{ entry.title }}</a>
+            </div>
+            {{ entry.description.slice(0, 200) }}... <a href="{{ entry.detail_url }}">selengkapnya</a>
+            
+            <div>
+                <small>
+                    Cek:
+                    <a href="{{ entry.demo_url }}/">Demo</a> -
+                    <a href="{{ site.github_url }}/project/">Github</a>
+                </small>
+            </div>
+        </article>
+    {% endfor %}
+
+</main>

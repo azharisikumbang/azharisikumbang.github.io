@@ -1,11 +1,11 @@
 {
-    "title": "azharisaputra.com",
-    "show_subtitle": false,
-    "subtitle": "\"Mahasiswa\"",
-    "menu": [
-        {
-            "title": "tulisan saya",
-            "post_list": "posts"
-        }
-    ]
+  "title": "azharisaputra.web.id",
+  "show_subtitle": false,
+  "subtitle": "\"Mahasiswa\"",
+  "menu": [
+    {
+      "title": "tulisan saya",
+      "post_list": "posts"
+    }
+  ]
 }
