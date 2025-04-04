@@ -5,6 +5,13 @@
       "year": 2025,
       "posts": [
         {
+          "title": "Fix: Laravel 7 Artisan Test Command Tidak Ditemukan",
+          "url": "https://medium.com/kafekoding/fix-laravel-7-artisan-test-command-tidak-ditemukan-8639165d5775",
+          "post_date": "05/04",
+          "post_year": "2025",
+          "post_fulldate": "2025-04-05"
+        },
+        {
           "title": "Migrasi Aplikasi dari Lumen ke Laravel",
           "url": "https://medium.com/kafekoding/berpindah-dari-aplikasi-lumen-ke-laravel-93f798572dd5",
           "post_date": "23/3",
