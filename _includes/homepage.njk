@@ -2,22 +2,21 @@
 layout: base.njk
 ---
 <header>
-    <h1>
+    <h1 style="margin: 0px">
         <a href="{{ site.url }}/about">{{ homepage.title or site.title }}</a>
     </h1>
 
     {% if homepage.show_subtitle %}
         {% set subtitle = homepage.subtitle %}
         {% if subtitle %}
-            <p>{{ subtitle }}</p>
+            <p style="margin-top: 0px">{{ subtitle }}</p>
         {% endif %}
-    {% else %}
+    {% endif %}
     <div id="nav">
         <a href="{{ site.url }}">beranda</a> -
         <a href="{{ site.url }}/project/">project</a> -
         <a href="{{ site.url }}/about/">tentang saya</a>
     </div>
-    {% endif %}
 </header>
 <main>
     <hr>

@@ -3,22 +3,21 @@ layout: base.njk
 permalink: /project/
 ---
 <header>
-    <h1>
+    <h1 style="margin:0px">
         <a href="{{ site.url }}/project">{{ project.title or site.title }}</a>
     </h1>
 
-    {% if project.show_subtitle %}
-        {% set subtitle = project.subtitle %}
+    {% if homepage.show_subtitle %}
+        {% set subtitle = homepage.subtitle %}
         {% if subtitle %}
-            <p>{{ subtitle }}</p>
+            <p style="margin-top: 0px">{{ subtitle }}</p>
         {% endif %}
-    {% else %}
+    {% endif %}
     <div id="nav">
         <a href="{{ site.url }}/">beranda</a> -
         <a href="{{ site.url }}/project/">project</a> -
         <a href="{{ site.url }}/about/">tentang saya</a>
     </div>
-    {% endif %}
 </header>
 <main>
     <hr>
@@ -33,8 +32,8 @@ permalink: /project/
             <div>
                 <small>
                     Cek:
-                    <a href="{{ entry.demo_url }}/">Demo</a> -
-                    <a href="{{ site.github_url }}/project/">Github</a>
+                    <a href="{{ entry.demo_url }}" target="_blank">Demo</a> -
+                    <a href="{{ site.github_url }}" target="_blank">Github</a>
                 </small>
             </div>
         </article>
