@@ -10,7 +10,7 @@
     {% endif %}
     <title>{{ title or site.title }}</title>
 
-    <link rel="stylesheet" href="{{ '/css/css.css' }}"> 
+    <link rel="stylesheet" href="{{ '/styles/app.css' }}"> 
     {% if page.url == '/' %}
         <script>
             if(location.hash) window.location = `/admin/#${location.href.split("#").pop()}`
@@ -25,6 +25,7 @@
 
       gtag('config', 'G-JRF181NEQ3');
     </script>
+    <script src="{{ '/scripts/app.js' }}" type="text/javascript">
 </head>
 <body>
     {{ content | safe }}
@@ -32,6 +33,6 @@
         &copy; 2023 - 
         Powered by <a href="https://www.11ty.dev">11ty.dev</a> - 
         Theme by <a href="{{ site.theme_url }}">{{ site.theme_name }}</a>
-    </div>
+</div>
 </body>
 </html>

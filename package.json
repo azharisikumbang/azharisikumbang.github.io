@@ -2,14 +2,25 @@
   "name": "11ty-no-style-please",
   "description": "A template for a minimalistic blog",
   "scripts": {
-    "build": "env NODE_ENV=production npx @11ty/eleventy",
-    "serve": "npx @11ty/eleventy --serve",
-    "start": "npx @11ty/eleventy --serve"
+    "build": "env NODE_ENV=production run-s build:*",
+    "serve": "npm-run-all -p dev:*",
+    "start": "npm-run-all -p dev:*",
+    "dev:11ty": "npx @11ty/eleventy --serve",
+    "dev:css": "npx @tailwindcss/cli -i ./src/styles/app.css -o _site/styles/app.css --watch",
+    "build:11ty": "npx @11ty/eleventy",
+    "build:css": "npx @tailwindcss/cli -i ./src/styles/app.css -o _site/styles/app.css"
   },
   "license": "MIT",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "@tailwindcss/postcss": "^4.1.4",
     "luxon": "^3.0.1",
     "markdown-it": "^13.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.4"
   }
 }
