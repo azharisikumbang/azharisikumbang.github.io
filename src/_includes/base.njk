@@ -28,11 +28,21 @@
     <script src="{{ '/scripts/app.js' }}" type="text/javascript">
 </head>
 <body>
+    {% include "menu.njk" ignore missing %}
+
     {{ content | safe }}
-    <div style="margin-top: 22px">
-        &copy; 2023 - 
-        Powered by <a href="https://www.11ty.dev">11ty.dev</a> - 
-        Theme by <a href="{{ site.theme_url }}">{{ site.theme_name }}</a>
-</div>
+
+    <footer class="bg-black w-full text-white">
+        <div class="container mx-auto">
+            <div class="py-8 lg:py-16 px-4 flex justify-between">
+                 <div>
+                    &copy; 2023 - Azhari Saputra (<a href="mailto:contact@azharisaputra.web.id" class="hover:text-green-700 hover:underline">contact@azharisaputra.web.id</a>)
+                </div>
+                 <div>
+                    Generated with <a href="https://www.11ty.dev" class="hover:text-green-700 hover:underline">11ty.dev</a>
+                 </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
