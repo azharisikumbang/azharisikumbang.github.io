@@ -5,5 +5,6 @@
   "back_home_text": "./kembali",
   "url": "https://azharisaputra.web.id",
   "theme_url": "https://github.com/stopnoanime/11ty-no-style-please",
-  "theme_name": "11ty-no-style-please"
+  "theme_name": "11ty-no-style-please",
+  "media_path": "media"
 }
