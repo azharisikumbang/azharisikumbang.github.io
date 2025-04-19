@@ -1,0 +1,15 @@
+{
+  "title": "azharisaputra.web.id",
+  "show_subtitle": true,
+  "subtitle": "Software Engineer | System Analyst (wanna be)",
+  "data": [
+    {
+      "title": "blog posts",
+      "post_list": "posts"
+    },
+    {
+      "title": "projects",
+      "project_list": "projects"
+    }
+  ]
+}

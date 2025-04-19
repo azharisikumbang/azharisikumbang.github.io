@@ -1,0 +1,72 @@
+{
+  "url": "https://azhari0.medium.com",
+  "items": [
+    {
+      "title": "Fix: Laravel 7 Artisan Test Command Tidak Ditemukan",
+      "url": "https://medium.com/kafekoding/fix-laravel-7-artisan-test-command-tidak-ditemukan-8639165d5775",
+      "post_date": "05/04",
+      "post_year": "2025",
+      "post_fulldate": "2025-04-05",
+      "summary": "Terdengar aneh, seharusnya command php artisan test sudah include ke dalam Laravel secara default. Tetapi, kasus ini terjadi setelah proses migrasi dari Lumen ke Laravel seperti pada artikel sebelumnya."
+    },
+    {
+      "title": "Migrasi Aplikasi dari Lumen ke Laravel",
+      "url": "https://medium.com/kafekoding/berpindah-dari-aplikasi-lumen-ke-laravel-93f798572dd5",
+      "post_date": "23/3",
+      "post_year": "2025",
+      "post_fulldate": "2025-03-23",
+      "summary": "Lumen dan Laravel adalah produk keluaran dari vendor yang sama, yaitu Laravel Foundation. Lumen dikeluarkan oleh Laravel sebagai opsi cepat dan ringan dari Laravel dalam membangun API. Tetapi itu dulu."
+    },
+    {
+      "title": "Upload Github Pages Ke Cloud Hosting Lewat FTP",
+      "url": "https://medium.com/kafekoding/upload-github-pages-ke-cloud-hosting-menggunakan-ftp-c644baf4ed11",
+      "post_date": "22/3",
+      "post_year": "2025",
+      "post_fulldate": "2025-03-22",
+      "summary": "Secara sederhana, github pages adalah salah satu fitur oleh github untuk meng-online-kan halaman web statis secara gratis menggunakan sub domain dari github."
+    },
+    {
+      "title": "Dikala Ingin Menulis Kode",
+      "url": "https://medium.com/kafekoding/dikala-ingin-menulis-kode-209936294ff9",
+      "post_date": "8/3",
+      "post_year": "2025",
+      "post_fulldate": "2025-03-08",
+      "summary": "Kamu mulai mencari masalah dan solusi baru (atau terkadang mengambil projek lama untuk diselesaikan). Mulai mencari referensi bagaimana membangun kode yang bagus dan tahan lama."
+    },
+    {
+      "title": "Bagaimana Seharusnya Sosial Media Diperlakuan: Pendekatan Sederhana",
+      "url": "https://azhari0.medium.com/bagaimana-seharusnya-sosial-media-diperlakuan-sehuah-pendekatan-pribadi-9edc12b3a793",
+      "post_date": "12/21",
+      "post_year": "2023",
+      "post_fulldate": "2023-12-21"
+    },
+    {
+      "title": "Pengelolaan Roles dan Permissions di Laravel dengan Spatie Permissions",
+      "url": "https://medium.com/kafekoding/pengelolaan-roles-dan-permissions-di-laravel-dengan-spatie-permissions-5d9bc8b9cbca",
+      "post_date": "12/20",
+      "post_year": "2023",
+      "post_fulldate": "2023-12-20"
+    },
+    {
+      "title": "Bagaimana Paginasi Dalam Tabel Bereleasi Pada MySQL",
+      "url": "https://medium.com/kafekoding/ketika-perangkat-lunak-sudah-mulai-kompleks-secara-linear-basis-data-juga-akan-ikut-menjadi-e967cc5b22c4",
+      "post_date": "12/16",
+      "post_year": "2023",
+      "post_fulldate": "2023-12-16"
+    },
+    {
+      "title": "Belajar Transaksi Dalam Basis Data",
+      "url": "https://medium.com/kafekoding/belajar-transaksi-dalam-f65a7f0a1c1c",
+      "post_date": "12/16",
+      "post_year": "2023",
+      "post_fulldate": "2023-12-16"
+    },
+    {
+      "title": "Ubuntu, Secure Boot dan VirtualBox",
+      "url": "https://medium.com/kafekoding/ubuntu-secure-boot-dan-virtualbox-77cb686c3016",
+      "post_date": "12/16",
+      "post_year": "2023",
+      "post_fulldate": "2023-12-16"
+    }
+  ]
+}

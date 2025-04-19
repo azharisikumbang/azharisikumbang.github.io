@@ -1,0 +1,36 @@
+---
+layout: base.njk
+permalink: /about/
+---
+<header>
+    <h1 style="margin: 0px">
+        <a href="{{ site.url }}">{{ homepage.title or site.title }}</a> - tentang
+    </h1>
+
+    {% if homepage.show_subtitle %}
+        {% set subtitle = homepage.subtitle %}
+        {% if subtitle %}
+            <p style="margin-top: 0px">{{ subtitle }}</p>
+        {% endif %}
+    {% endif %}
+    <div id="nav">
+        <a href="{{ site.url }}/">beranda</a> -
+        <a href="{{ site.url }}/project/">project</a> -
+        <a href="{{ site.url }}/about/">tentang saya</a>
+    </div>
+</header>
+<main>
+    <hr>
+    <div>Saya adalah fresh graduate (2024) dan saya tertarik dengan software engineering.</div>
+    <div>
+        - sertifikasi: 
+            <a href="https://mikrotik.com/training/certificates/c119971c43428b68594d" target="_blank">mtcna</a>, 
+            <a href="https://mikrotik.com/training/certificates/c120191cacc6bf07f22d" target="_blank">mtctce</a>, 
+            <a href="https://www.credential.net/1a5df580-e82a-4244-980a-cbae7fbebf0d" target="_blank">ace</a>
+        <br>
+        - temukan: 
+            <a href="{{ about.telegram }}" target="_blank">telegram</a> / 
+            <a href="{{ about.linkedin }}" target="_blank">linkedin</a> / 
+            <a href="https://github.com/azharisikumbang" target="_blank">github</a>
+    </div>
+</main>

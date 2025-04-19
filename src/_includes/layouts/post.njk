@@ -1,0 +1,17 @@
+---
+layout: base.njk
+---
+<article class="w-full">
+    <div class="max-w-screen-xl mx-auto">
+        <div class="py-8 lg:py-16 px-4">
+            <a href="/blog" class="text-gray-500 hover:underline hover:text-green-700">{{ site.back_home_text }}</a>
+            <h1 class="text-3xl md:text-4xl font-display mb-4 font-bold text-green-600">{{ title }}</h1>
+            <p class="mb-4 text-grey-light italic text-small"> posted at
+              <time datetime="{{ page.date }}">{{ page.date | htmlDateString }}</time>
+            </p>
+            <div class="">
+              {{ content | safe  }}
+            </div>            
+        </div>
+    </div>
+</article>

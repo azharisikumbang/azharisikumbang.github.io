@@ -1,0 +1,40 @@
+---
+layout: base.njk
+permalink: /projects/
+eleventyImport:
+  collections: ["projects"]
+---
+<section class="w-full">
+    <div class="max-w-screen-xl mx-auto">
+        <div class="py-8 lg:py-16 px-4">
+            <h1 class="text-3xl md:text-4xl font-display mb-4 font-bold text-green-600">./Projects</h1>
+            
+            <div class="grid grid-cols-2 gap-8 mt-8">
+                {% for post in collections.projects %}
+                <div class="p-2 border-1 border-gray-200 hover:cursor-pointer">
+                    <div class="h-86 overflow-hidden">
+                        <a href="{{ post.url }}">
+                            {% if post.data.featured_image|length %}
+                                <img class="w-full h-auto transition-transform transform hover:scale-110 hover:opacity-80" src="{{ site.url + '/' + site.media_path + '/' + post.data.featured_image}}" alt="{{ post.data.title }}">
+                            {% else %}
+                                <img class="w-full h-auto" src="https://placehold.co/600x400" alt="no-image-available">    
+                            {% endif %}
+                        </a>
+                    </div>
+                    <div class="py-2">
+                        <h3 class="text-2xl">
+                            <a href="{{ post.url }}" class="hover:cursor-pointer hover:underline">{{ post.data.title }}</a>
+                        </h3>
+                        <p>{{ post.data.summary }}</p>
+                        <ul class="flex flex-wrap space-x-2">
+                          <li>Live Demo</li>
+                          <li>Github</li>
+                          <li>Tutorial</li>
+                        </ul>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div> 
+    </div>
+</section>

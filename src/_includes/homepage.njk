@@ -1,0 +1,98 @@
+---
+layout: base.njk
+
+eleventyImport:
+  collections: ["projects"]
+---
+<main>
+    {# Welcome Profile::start #}
+    <section class="w-full">
+        <div class="container mx-auto">
+            <div class="py-8 lg:py-16 px-4">
+                <h1 class="text-3xl md:text-4xl font-display mb-4 font-bold text-green-600">an Entry-Level Software Engineer</h1>
+                <div class="mb-4 text-grey-light space-y-2 max-w-2xl">
+                    <p>After 4+ years of experience as a network engineer and getting some certifications, I decided to rebuild my career and become a software engineer, focusing on backend engineering.</p>
+                    <p>I got my degree in Information Systems, which helped me practice and build some of my projects. My favorite ways to build software are using OOP practices and following the TDD approach. They help me produce working code.</p>
+                    <ul>
+                        <li>Languages: PHP, Javascript, Python, SQL, Java (basic)</li>
+                        <li>Frameworks: Laravel, Symfony, Wordpress, Spring Boot (basic)</li>
+                        <li>Tools: Git, Docker.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    {# Welcome Profile::end #}
+
+    
+    {# Featured projects::start #}
+    <section class="bg-green-100 w-full">
+        <div class="container mx-auto">
+            <div class="py-8 lg:py-16 px-4">
+                <h2 class="text-3xl md:text-4xl font-display mb-8 text-green-600">
+                    <a href="/projects" class="hover:underline">Featured Projects</a>
+                </h2>
+
+                <div class="grid grid-cols-3 gap-8">
+                    {% for post in collections.projects.slice(0,6) %}
+                    <div>
+                        <div class="h-64 overflow-hidden">
+                            <a href="{{ post.url }}">
+                                {% if post.data.featured_image|length %}
+                                    <img class="w-full h-auto transition-transform transform hover:scale-110 hover:opacity-80" src="{{ site.media_path }}/{{ post.data.featured_image }}" alt="{{ post.data.title }}">
+                                {% else %}
+                                    <img class="w-full h-auto" src="https://placehold.co/600x400" alt="no-image-available">    
+                                {% endif %}
+                            </a>
+                        </div>
+                        <div class="py-5 space-y-2">
+                            <h3 class="text-2xl">
+                                <a href="{{ post.url }}" class="hover:cursor-pointer hover:underline">{{ post.data.title }}</a>
+                            </h3>
+                            <p>{{ post.data.summary }}</p>
+                            <ul class="flex flex-wrap space-x-2">
+                            </ul>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <div class="mt-8">
+                    <a href="/blog" class="text-green-900 border-green-900 p-4 py-2 border-1 hover:bg-green-700 hover:text-white">more projects &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    {# Featured projects::end #}
+
+    {# Blog::start #}
+    <section class="bg-black w-full text-white">
+        <div class="container mx-auto">
+            <div class="py-8 lg:py-16 px-4">
+                <h2 class="text-3xl md:text-4xl font-display mb-8">
+                    <a href="/blog" class="hover:underline">Blog</a>
+                </h2>
+
+                <div class="grid xl:grid-cols-2 grid-cols-1 gap-4">
+                    {% set blog_posts = medium.items.slice(0,4) %}
+                    {% for entry in blog_posts %}
+                        <a target="_blank" href="{{ entry.url }}">
+                            <div class="mb-4 border-b border-b-1 hover:bg-green-900 py-4 space-y-2 hover:pl-4 transition-all">
+                                <h3 class="text-2xl">{{ entry.title }}</h3>
+                                {% if entry.summary|length %}
+                                <p>{{ entry.summary.slice(0, 150) }}...</p>
+                                {% endif %}
+                                <p class="text-small italic" >posted on medium at <time datetime="{{ entry.post_fulldate }}">({{ entry.post_date }})</time></p>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
+
+                <div class="mt-8">
+                    <a href="/blog" class="bg-green-900 border p-4 py-2 hover:bg-green-700">more posts &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    {# Blog::end #}
+</main>
