@@ -5,8 +5,8 @@
     "build": "env NODE_ENV=production run-s build:*",
     "serve": "npm-run-all -p dev:*",
     "start": "npm-run-all -p dev:*",
+    "dev:css": "npx @tailwindcss/cli -i ./src/styles/app.css -o _site/styles/app.css --watch",
     "dev:11ty": "npx @11ty/eleventy --serve",
-    "dev:css": "npx @tailwindcss/cli -i ./src/styles/app.css -o _site/styles/app.css --watch --poll",
     "build:11ty": "npx @11ty/eleventy",
     "build:css": "npx @tailwindcss/cli -i ./src/styles/app.css -o _site/styles/app.css"
   },
