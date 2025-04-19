@@ -1,5 +1,8 @@
 ---
 layout: base.njk
+
+eleventyImport:
+  collections: ["projects"]
 ---
 <main>
     {# Welcome Profile::start #}
@@ -23,31 +26,35 @@ layout: base.njk
 
     
     {# Featured projects::start #}
-    <section class="bg-gray-100 w-full">
+    <section class="bg-green-100 w-full">
         <div class="container mx-auto">
             <div class="py-8 lg:py-16 px-4">
                 <h2 class="text-3xl md:text-4xl font-display mb-8 text-green-600">
-                    <a href="/projects" class="hover:underline">Projects</a>
+                    <a href="/projects" class="hover:underline">Featured Projects</a>
                 </h2>
 
-                <div class="grid grid-cols-3 gap-4">
-                    {% for i in range(0, 6) -%}
-                        <div class="border-1 border-gray-200 bg-white">
-                        <a href="#">
-                            <img class="w-full" src="https://placehold.co/600x400" alt="">
-                        </a>
-                        <div class="p-5 space-y-2">
-                            <h3 class="text-2xl">Stock Management Systems</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id architecto nesciunt quidem magnam non veniam quod debitis maiores eaque maxime voluptatum, deserunt...</p>
+                <div class="grid grid-cols-3 gap-8">
+                    {% for post in collections.projects.slice(0,6) %}
+                    <div>
+                        <div class="h-64 overflow-hidden">
+                            <a href="#">
+                                {% if post.data.featured_image|length %}
+                                    <img class="w-full h-auto" src="{{ site.media_path }}/{{ post.data.featured_image }}" alt="{{ post.data.title }}">
+                                {% else %}
+                                    <img class="w-full h-auto" src="https://placehold.co/600x400" alt="no-image-available">    
+                                {% endif %}
+                            </a>
+                        </div>
+                        <div class="py-5 space-y-2">
+                            <h3 class="text-2xl">
+                                <a href="{{ post.url }}" class="hover:cursor-pointer hover:underline">{{ post.data.title }}</a>
+                            </h3>
+                            <p>{{ post.data.summary }}</p>
                             <ul class="flex flex-wrap space-x-2">
-                                <li class="">#Laravel</li>
-                                <li class="">#TailwindCSS</li>
-                                <li class="">#AlpineJS</li>
-                                <li class="">#Dompdf</li>
                             </ul>
                         </div>
                     </div>
-                    {%- endfor %}
+                    {% endfor %}
                 </div>
 
                 <div class="mt-8">
@@ -66,14 +73,14 @@ layout: base.njk
                     <a href="/blog" class="hover:underline">Blog</a>
                 </h2>
 
-                <div class="grid grid-cols-2 gap-4">
+                <div class="grid xl:grid-cols-2 grid-cols-1 gap-4">
                     {% set blog_posts = medium.items.slice(0,4) %}
                     {% for entry in blog_posts %}
                         <a target="_blank" href="{{ entry.url }}">
                             <div class="mb-4 border-b border-b-1 hover:bg-green-900 py-4 space-y-2 hover:pl-4 transition-all">
                                 <h3 class="text-2xl">{{ entry.title }}</h3>
                                 {% if entry.summary|length %}
-                                <p>{{ entry.summary.slice(0, 200) }}...</p>
+                                <p>{{ entry.summary.slice(0, 150) }}...</p>
                                 {% endif %}
                                 <p class="text-small italic" >posted on medium at <time datetime="{{ entry.post_fulldate }}">({{ entry.post_date }})</time></p>
                             </div>
