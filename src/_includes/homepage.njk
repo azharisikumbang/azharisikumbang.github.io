@@ -37,9 +37,9 @@ eleventyImport:
                     {% for post in collections.projects.slice(0,6) %}
                     <div>
                         <div class="h-64 overflow-hidden">
-                            <a href="#">
+                            <a href="{{ post.url }}">
                                 {% if post.data.featured_image|length %}
-                                    <img class="w-full h-auto" src="{{ site.media_path }}/{{ post.data.featured_image }}" alt="{{ post.data.title }}">
+                                    <img class="w-full h-auto transition-transform transform hover:scale-110 hover:opacity-80" src="{{ site.media_path }}/{{ post.data.featured_image }}" alt="{{ post.data.title }}">
                                 {% else %}
                                     <img class="w-full h-auto" src="https://placehold.co/600x400" alt="no-image-available">    
                                 {% endif %}
