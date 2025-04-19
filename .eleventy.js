@@ -2,11 +2,15 @@ const { DateTime } = require("luxon");
 const markdownIt = require("markdown-it");
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("src/styles");
+  // eleventyConfig.addPassthroughCopy("src/styles");
   eleventyConfig.addPassthroughCopy("src/media");
 
   eleventyConfig.addFilter("formatDate", (dateObj) => {
     return `${dateObj.getDate()}\/${dateObj.getMonth() + 1}`;
+  });
+
+  eleventyConfig.addFilter("htmlDateString", (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
   });
 
   let markdownOptions = {
