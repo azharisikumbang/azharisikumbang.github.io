@@ -7,28 +7,31 @@
       "post_date": "05/04",
       "post_year": "2025",
       "post_fulldate": "2025-04-05",
-      "summary": "TCP/ IP atau Transmission Control Protocol / Internet Protocol, diawali oleh J.C.R Lick Lider dari MIT, pada Agustus 1962. Licklider membahasa bagaimana interaksi antar komputer dapat terjadi dalam jaringan."
+      "summary": "Terdengar aneh, seharusnya command php artisan test sudah include ke dalam Laravel secara default. Tetapi, kasus ini terjadi setelah proses migrasi dari Lumen ke Laravel seperti pada artikel sebelumnya."
     },
     {
       "title": "Migrasi Aplikasi dari Lumen ke Laravel",
       "url": "https://medium.com/kafekoding/berpindah-dari-aplikasi-lumen-ke-laravel-93f798572dd5",
       "post_date": "23/3",
       "post_year": "2025",
-      "post_fulldate": "2025-03-23"
+      "post_fulldate": "2025-03-23",
+      "summary": "Lumen dan Laravel adalah produk keluaran dari vendor yang sama, yaitu Laravel Foundation. Lumen dikeluarkan oleh Laravel sebagai opsi cepat dan ringan dari Laravel dalam membangun API. Tetapi itu dulu."
     },
     {
       "title": "Upload Github Pages Ke Cloud Hosting Lewat FTP",
       "url": "https://medium.com/kafekoding/upload-github-pages-ke-cloud-hosting-menggunakan-ftp-c644baf4ed11",
       "post_date": "22/3",
       "post_year": "2025",
-      "post_fulldate": "2025-03-22"
+      "post_fulldate": "2025-03-22",
+      "summary": "Secara sederhana, github pages adalah salah satu fitur oleh github untuk meng-online-kan halaman web statis secara gratis menggunakan sub domain dari github."
     },
     {
       "title": "Dikala Ingin Menulis Kode",
       "url": "https://medium.com/kafekoding/dikala-ingin-menulis-kode-209936294ff9",
       "post_date": "8/3",
       "post_year": "2025",
-      "post_fulldate": "2025-03-08"
+      "post_fulldate": "2025-03-08",
+      "summary": "Kamu mulai mencari masalah dan solusi baru (atau terkadang mengambil projek lama untuk diselesaikan). Mulai mencari referensi bagaimana membangun kode yang bagus dan tahan lama."
     },
     {
       "title": "Bagaimana Seharusnya Sosial Media Diperlakuan: Pendekatan Sederhana",
