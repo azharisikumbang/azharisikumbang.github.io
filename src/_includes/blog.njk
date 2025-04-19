@@ -18,7 +18,7 @@ layout: base.njk
                     {% endif %}
                     
                     <li class="pl-6 text-xl">
-                        <a class="hover:text-green-700 hover:underline" href="{{ medium.url }}">{{ medium.title }}</a>
+                        <a class="hover:text-green-700 hover:underline" href="{{ medium.url }}" target="_blank">{{ medium.title }}</a>
                         <time datetime="{{ medium.post_fulldate }}">({{ medium.post_date }})</time>
                     </li>
                 {% endfor %}
