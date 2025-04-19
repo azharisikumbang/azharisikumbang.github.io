@@ -10,7 +10,7 @@
     
     <title>Cara Setting DHCP Server pada Cisco</title>
 
-    <link rel="stylesheet" href="/css/css.css"> 
+    <link rel="stylesheet" href="/styles/app.css"> 
     
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRF181NEQ3"></script>
@@ -21,18 +21,52 @@
 
       gtag('config', 'G-JRF181NEQ3');
     </script>
+    <script src="/scripts/app.js" type="text/javascript">
 </head>
 <body>
-    <a href="/">./kembali</a>
+    <nav class="border-gray-200 mx-auto border-b">
+    <div class="flex flex-wrap items-center justify-between mx-auto p-4 container">
+        <a href="https://azharisaputra.web.id" class="flex items-center space-x-3 rtl:space-x-reverse text-green-600">
+            <span class="self-center text-2xl font-semibold whitespace-nowrap">Azhari Saputra</span>
+        </a>
+        <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
+            <li>
+            <a href="https://azharisaputra.web.id/" class="block hover:underline py-2 px-3 text-green-600 rounded-sm md:p-0" aria-current="page">Home</a>
+            </li>
+            <li>
+            <a href="https://azharisaputra.web.id/projects" class="block hover:underline py-2 px-3 text-green-600 rounded-sm md:p-0" aria-current="page">Projects</a>
+            </li>
+            <li>
+            <a href="https://azharisaputra.web.id/blog" class="block hover:underline py-2 px-3 text-green-600 rounded-sm md:p-0" aria-current="page">Blog</a>
+            </li>
+            <li>
+            <a href="https://azharisaputra.web.id/contact" class="block hover:underline py-2 px-3 text-green-600 rounded-sm md:p-0" aria-current="page">Contact</a>
+            </li>
+            <li>
+            <a href="https://azharisaputra.web.id/resume.pdf" class="block hover:underline py-2 px-3 text-green-600 rounded-sm md:p-0 underline" aria-current="page">Resume</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+</nav>
 
-<article>
-  <p class="post-meta">
-    <time datetime="Mon May 03 2021 00:00:00 GMT+0000 (Coordinated Universal Time)">3/5</time>
-  </p>
-  
-  <h1>Cara Setting DHCP Server pada Cisco</h1>
-  
-  <!--kg-card-begin: html-->
+    <article class="w-full">
+    <div class="max-w-screen-xl mx-auto">
+        <div class="py-8 lg:py-16 px-4">
+            <a href="/blog" class="text-gray-500 hover:underline hover:text-green-700">./kembali</a>
+            <h1 class="text-3xl md:text-4xl font-display mb-4 font-bold text-green-600">Cara Setting DHCP Server pada Cisco</h1>
+            <p class="mb-4 text-grey-light italic text-small"> posted at
+              <time datetime="Mon May 03 2021 00:00:00 GMT+0000 (Coordinated Universal Time)">2021-05-03</time>
+            </p>
+            <div class="">
+              <!--kg-card-begin: html-->
 <p>DHCP atau<a href="https://id.wikipedia.org/wiki/Protokol_Konfigurasi_Hos_Dinamik" target="_blank" rel="noreferrer noopener"> Dynamic Host Configuration Protocol</a> merupakan salah satu mekanisme yang terdapat pada jaringan dalam pendistribusian ip. DHCP ini bekerja dengan mendistribusikan ip secara otomatis ke target client dhcpnya. Dengan kata lain, kita tidak diperlukan lagi menyeting ip secara manual pada setiap komputer (client) agar dapat terkoneksi ke jaringan.</p>
 <blockquote class="wp-block-quote"><p>Baca Juga : <a href="https://coretanit.com/tutorial-konfigurasi-dasar-mikrotik-routeros/" target="_blank" rel="noreferrer noopener">Tutorial Konfigurasi Dasar Mikrotik RouterOS</a></p></blockquote>
 <h2>Topologi</h2>
@@ -83,11 +117,22 @@ IP address       Client-ID/              Lease expiration        Type
 <p>Sekian dan semoga bermanfaat</p>
 <!--kg-card-end: html-->
 
-</article>
-    <div style="margin-top: 22px">
-        &copy; 2023 - 
-        Powered by <a href="https://www.11ty.dev">11ty.dev</a> - 
-        Theme by <a href="https://github.com/stopnoanime/11ty-no-style-please">11ty-no-style-please</a>
+            </div>            
+        </div>
     </div>
+</article>
+
+    <footer class="bg-black w-full text-white">
+        <div class="container mx-auto">
+            <div class="py-8 lg:py-16 px-4 flex justify-between">
+                 <div>
+                    &copy; 2023 - Azhari Saputra (<a href="mailto:contact@azharisaputra.web.id" class="hover:text-green-700 hover:underline">contact@azharisaputra.web.id</a>)
+                </div>
+                 <div>
+                    Generated with <a href="https://www.11ty.dev" class="hover:text-green-700 hover:underline">11ty.dev</a>
+                 </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
