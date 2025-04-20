@@ -264,9 +264,6 @@
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
-  .h-64 {
-    height: calc(var(--spacing) * 64);
-  }
   .h-86 {
     height: calc(var(--spacing) * 86);
   }
@@ -302,9 +299,6 @@
   }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -647,9 +641,19 @@
       padding-block: calc(var(--spacing) * 16);
     }
   }
+  .xl\:h-64 {
+    @media (width >= 80rem) {
+      height: calc(var(--spacing) * 64);
+    }
+  }
   .xl\:grid-cols-2 {
     @media (width >= 80rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .xl\:grid-cols-3 {
+    @media (width >= 80rem) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
   .rtl\:space-x-reverse {
