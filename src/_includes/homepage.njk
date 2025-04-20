@@ -33,10 +33,10 @@ eleventyImport:
                     <a href="/projects" class="hover:underline">Featured Projects</a>
                 </h2>
 
-                <div class="grid grid-cols-3 gap-8">
+                <div class="grid xl:grid-cols-3 grid-cols-1 gap-8">
                     {% for post in collections.projects.slice(0,6) %}
                     <div>
-                        <div class="h-64 overflow-hidden">
+                        <div class="xl:h-64 overflow-hidden">
                             <a href="{{ post.url }}">
                                 {% if post.data.featured_image|length %}
                                     <img class="w-full h-auto transition-transform transform hover:scale-110 hover:opacity-80" src="{{ site.media_path }}/{{ post.data.featured_image }}" alt="{{ post.data.title }}">
@@ -58,7 +58,7 @@ eleventyImport:
                 </div>
 
                 <div class="mt-8">
-                    <a href="/blog" class="text-green-900 border-green-900 p-4 py-2 border-1 hover:bg-green-700 hover:text-white">more projects &rarr;</a>
+                    <a href="/projects" class="text-green-900 border-green-900 p-4 py-2 border-1 hover:bg-green-700 hover:text-white">more projects &rarr;</a>
                 </div>
             </div>
         </div>
