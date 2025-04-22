@@ -2,7 +2,7 @@
 title: "Map-Based Students Distribution"
 featured_image: /students-distribution/featured-image.png
 summary: "A map-based visualization for student's home address distribution grouped by 'kecamatan' (Indonesian administration name for 'District'). There are three classification for distribution with different color. It will be good option to plan targeted promotion to gain new students."
-date: 2025-01-02
+date: 2025-01-10
 tags: projects
 slug: map-based-student-distribution
 layout: layouts/project.njk
