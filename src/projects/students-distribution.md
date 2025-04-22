@@ -1,7 +1,7 @@
 ---
 title: "Map-Based Students Distribution"
 featured_image: /students-distribution/featured-image.png
-summary: "Era javascript di dunia programming naik begitu cepat, hal ini ditandai dengan munculnya berbagai produk yang menjadikan javascript sebagai…"
+summary: "A map-based visualization for student's home address distribution grouped by 'kecamatan' (Indonesian administration name for 'District'). There are three classification for distribution with different color. It will be good option to plan targeted promotion to gain new students."
 date: 2025-01-02
 tags: projects
 slug: map-based-student-distribution
