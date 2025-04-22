@@ -10,28 +10,82 @@ layout: layouts/project.njk
 
 # Multi Site Stock Management System
 
-An vel ullum legendos salutandi. Has augue placerat phaedrum cu. Vidit dolor omittam no vix, id quo viderer convenire tincidunt. Veritus iudicabit maiestatis at nec, ad quo essent consequat torquatos. Eam ea suas purto mentitum. Quaestio mediocrem mei ut.
+# Project Description
 
-Clita laboramus in est, phaedrum repudiare mea ne. Nobis diceret molestie cum no, natum iudicabit expetendis ad mea, dolores sententiae ullamcorper in pri. Cum iudico primis eu. Dicta error sententiae qui ne, nec eu erant dicam commune. Et vis constituam scriptorem, usu probo dicam no. Eu quodsi partiendo intellegat qui, ad nec sumo debet officiis.
+The project based-on some business use-case from a distributor for seeds and fertilizers company. We covered three main cases, they are manage stocks on multi warehouses (isolated), to track sales canvasses activity and syncronize moving-stock accross warehouses.
 
-Eu nam nemore appetere, homero labitur invenire no vel. At civibus commune mel, est ad posidonium efficiendi conclusionemque. Ius alia solum noluisse et, in meis electram partiendo sit. Error tation conceptam te vim. Est ea tale aeque omnes.
+# Demo UX Flow
 
-Has ad audiam sensibus. Sit cu nobis partem, cu propriae persecuti expetendis duo. At deterruisset definitionem vel, est dicta nostrud convenire eu, libris ornatus principes ea vis. Appareat voluptatum eloquentiam vix ne, an omnis ludus molestiae qui. Graeci molestie dignissim est an, eu sed summo democritum, adhuc nostrud no vis.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ri-QFO-VAck?si=b31nBLSmlHfS8vGo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-Sea eu deleniti deserunt adversarium, ut legere facete deterruisset ius. Saperet comprehensam an has, usu sanctus legimus ea. Eum eruditi aliquando id. Eam ut rebum adolescens. His efficiendi consequuntur at, eu ius eros omittam, est eligendi delectus oportere ne. Ei vim duis prompta.
+# Problem and Solutions
 
-Eruditi reprehendunt his ut, sed no diam latine. Ei mei erat prompta dissentiet, quaeque forensibus voluptatum ius ut. Eos no solet fuisset, eros adversarium cu vix. Putant saperet no cum. In dolores deseruisse dissentias sed, modus graeci volutpat et eam. Eam dicta ubique doming cu, in ferri persius euismod pri.
+What are the problems and what we proposed,
 
-Ne doctus cetero aliquam qui, ei eius augue qui. Eos id timeam minimum democritum, sit ei corpora offendit euripidis. Pri an persecuti constituto. Nec ea tractatos eloquentiam. Velit laboramus nec an. Cu pertinacia suscipiantur vix. Mea ne illud mnesarchum.
+1. The old excel-based workflows is messy, not because the excel, but how they using the excel. The excel they created is unstandarized, admin-oriented and hard to understand in first place (not just one warehouse). It also just stored in one laptop, no backup, when it crashed it's gone. So, we optimize this process with web-based management system.
+2. The canvasses activity takes 5-7 days to return back and report the sales to the offices. This is a problem, when the purchasing division trying to re-order the stocks, they should know what stocks is sold as soon as possible. They are already has a strategy for this, but we proposed other options to make the sales staf record the sales as soon as possible.
+3. The moving-stocks between warehouses. When stocks moving from a warehouse to another, it takes 3-4 days (administration, distance, etc) to receive the confirmation. Again, sometimes, the purchasing needs to order new stocks. And we proposed to a single click button to syncronize the stocks on sender and receiver warehouse.
+4. The management needs to know a real-time stocks report whenever, not need to wait the staf to create it first.
 
-Eu nostro constituto pro, ne pri homero probatus. Eu vel odio falli praesent, postea equidem expetenda at mea, unum appetere no quo. Vis laudem qualisque cu, nec nulla altera utroque ea, vitae noster ei mea. Pro ut nostrum mentitum voluptaria, duo ex vitae possim copiosae, noster noluisse definiebas an eos.
+# Tech Stuff
 
-Sit ex vero veri. Per ut debet placerat referrentur, quodsi ceteros tractatos eum et. Mel percipit vivendum molestiae no. Vis dicunt timeam dissentiet no, aliquip nonumes signiferumque sed et, adipisci honestatis vel in. Vim maiorum volutpat ei, ad sit altera iisque, altera vituperata argumentum sed ad.
+## Tech Stack
 
-Ut nam fugit tritani quaestio, vis eros doctus at. Feugait voluptaria ne quo, debet quaeque est in. Primis audiam accommodare ut vel. An putant maluisset nec.
+The tech stack we used in this projects are,
 
-An eam alia omnis nihil, utamur meliore officiis ea sit, cum id nullam habemus detracto. Prima noluisse explicari quo te, an error aeque saperet mei. Utroque epicuri insolens vel et. Ea vis ornatus constituam, eam fabulas perfecto eu. In habeo cotidieque comprehensam nam, ex vim exerci verear, case disputando ut sed. Aeterno incorrupte complectitur vix ei.
+1. PHP 8.2
+2. Laravel framework (11.9)
+3. TailwindCSS v3
+4. AlpineJS
+5. DomPDF
 
-Laudem nostrud maluisset sit an. Illum vivendo praesent est ne. Percipit assentior duo at, dicta error consul mei ea. At pertinax assentior forensibus ius, agam mandamus cu pri.
+## Install
 
-Vix et regione officiis. Fugit mazim vivendo has ea, nobis corpora id pro, dicunt euismod qui te. Pri eu graeci detracto. Duo porro debet appetere ex, debet cetero democritum ea vix.
+To install just follow this command on you terminal,
+
+```bash
+git clone https://github.com/azharisikumbang/cvwpm.git
+cd cvwpm
+
+composer install
+# dont forget to setting database config at .env file
+```
+
+Run the migrations to supply administrator data and some fake data, (run one of the command)
+
+```bash
+php artisan migrate --seed # for all data
+php artisan migrate --seeder=AdminAndManajerUserSeeder # if you just want admin and manager user, not all fake data
+```
+
+Just build the front-end,
+
+```bash
+npm install
+npm run build
+```
+
+Run the project,
+
+```bash
+php artisan serve
+```
+
+# Give a try
+
+```txt
+Account list
+All username just use password = 12345678
+
+Available username:
+- admin (Web Admin)
+- manager (Manager)
+
+- stockpadang (Admin Stok Padang)
+- purchasingpadang (Admin Purchasing Padang)
+- salespadang (Sales Padang)
+
+- stocksolok (Admin Stok solok)
+- purchasingsolok (Admin Purchasing solok)
+- salessolok (Sales solok)
+```
