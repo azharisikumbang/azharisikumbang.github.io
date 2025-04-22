@@ -5,7 +5,12 @@ layout: base.njk
     <div class="max-w-screen-xl mx-auto">
         <div class="py-8 lg:py-16 px-4">
             <a href="/projects" class="text-gray-500 hover:underline hover:text-green-700">{{ site.back_home_text }}</a>
-            <h1 class="text-3xl md:text-4xl font-display mb-4 font-bold text-green-600">{{ title }}</h1>
+            <h1 class="text-3xl md:text-4xl font-display font-bold text-green-600">{{ title }}</h1>
+            <div class="flex flex-wrap space-x-4">
+                <a class="text-green-500 hover:underline" target="_blank" href="{{ live_demo }}">Live mode</a>
+                <a class="text-green-500 hover:underline" target="_blank" href="{{ youtube }}">Tutorial</a>
+                <a class="text-green-500 hover:underline" target="_blank" href="{{ github }}">Github</a>
+            </div>
             <div class="">
               {{ content | safe  }}
             </div>            

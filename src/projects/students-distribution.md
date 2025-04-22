@@ -6,6 +6,9 @@ date: 2025-01-02
 tags: projects
 slug: map-based-student-distribution
 layout: layouts/project.njk
+github: "https://github.com/azharisikumbang/webgis"
+youtube: ""
+live_demo: "https://demo-sebaran-mahasiswa.azharisaputra.web.id/"
 ---
 
 A map-based visualization for student's home address distribution grouped by 'kecamatan' (Indonesian administration name for 'District'). There are three classification for distribution with different color. It will be good option to plan targeted promotion to gain new students.
@@ -44,5 +47,3 @@ php bin/console doctrine:database:create
 php bin/console doctrine:schema:update --force
 php bin/console server:start
 ```
-
-

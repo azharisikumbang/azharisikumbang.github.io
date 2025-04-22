@@ -11,9 +11,12 @@ stacks:
   - LaravelExcel
 slug: library-information-system
 layout: layouts/project.njk
+github: "https://github.com/azharisikumbang/perpustakaan"
+youtube: ""
+live_demo: "https://demo-perpustakaan.azharisaputra.web.id/"
 ---
 
-Aplikasi web untuk mengelola sistem perpustakaan dengan menitikberatkan pada ruang lingkup hanya administrator. Memudahkan administrator untuk melakukan tugas-tugas pencatatan data buku, peminjaman, perhitungan denda keterlambatan dan sebagainya. 
+Aplikasi web untuk mengelola sistem perpustakaan dengan menitikberatkan pada ruang lingkup hanya administrator. Memudahkan administrator untuk melakukan tugas-tugas pencatatan data buku, peminjaman, perhitungan denda keterlambatan dan sebagainya.
 
 Note: Aplikasi tidak mempunyai sistem registrasi untuk pengguna baru (hanya lewat administrator).
 
@@ -25,6 +28,7 @@ Note: Aplikasi tidak mempunyai sistem registrasi untuk pengguna baru (hanya lewa
 - Pembuatan laporan yang lambat dan rumit, apalagi ketika dibutuhkan dalam waktu cepat (kebutuhan kepala perpustakaan).
 
 ## Fitur Aplikasi
+
 - [x] Authentication and Authorization (role-based)
 - [x] Pengelolaan keanggotaan
 - [x] Penyimpanan buku dengan data DCC, lokasi rak dan lainnya.
@@ -35,13 +39,15 @@ Note: Aplikasi tidak mempunyai sistem registrasi untuk pengguna baru (hanya lewa
 ## Tech Stack
 
 Kebutuhan dasar :
+
 - PHP >= 8.0
 - MYSQL
 - Composer and Nodejs
 
 Tech Stack dari aplikasi :
+
 - Laravel
-- TailwindCSS 
+- TailwindCSS
 - AlpineJS
 - Laravel Excel
 
@@ -51,18 +57,16 @@ Tech Stack dari aplikasi :
 git clone htttps://github.com/azharisikumbang/perpustakaan
 cd perpustakaan
 
-composer install 
+composer install
 
 # set database config in .env file
 php artisan migrate --seed
 
 # build the front end
-npm install 
+npm install
 npm run dev
 
 # serve the app
 php artisan serve
 
 ```
-
-

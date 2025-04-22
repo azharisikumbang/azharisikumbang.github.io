@@ -25,11 +25,17 @@ eleventyImport:
                         <h3 class="text-2xl">
                             <a href="{{ post.url }}" class="hover:cursor-pointer hover:underline">{{ post.data.title }}</a>
                         </h3>
-                        <p>{{ post.data.summary }}</p>
-                        <ul class="flex flex-wrap space-x-2">
-                          <li>Live Demo</li>
-                          <li>Github</li>
-                          <li>Tutorial</li>
+                        <p>{{ post.data.summary.slice(0, 150) }}...</p>
+                        <ul class="flex flex-wrap space-x-2 mt-2">
+                          <li>
+                            <a class="text-green-500 hover:underline" target="_blank" href="{{ post.data.live_demo }}">Live mode</a>
+                          </li>
+                          <li>
+                            <a class="text-green-500 hover:underline" target="_blank" href="{{ post.data.youtube }}">Tutorial</a>
+                          </li>
+                          <li>
+                            <a class="text-green-500 hover:underline" target="_blank" href="{{ post.data.github }}">Github</a>
+                          </li>
                         </ul>
                     </div>
                 </div>
