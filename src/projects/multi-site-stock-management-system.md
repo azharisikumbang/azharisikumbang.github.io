@@ -8,17 +8,13 @@ slug: multi-site-stock-management-system
 layout: layouts/project.njk
 ---
 
-# Multi Site Stock Management System
-
-# Project Description
-
 The project based-on some business use-case from a distributor for seeds and fertilizers company. We covered three main cases, they are manage stocks on multi warehouses (isolated), to track sales canvasses activity and syncronize moving-stock accross warehouses.
 
-# Demo UX Flow
+## Demo UX Flow
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ri-QFO-VAck?si=b31nBLSmlHfS8vGo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-# Problem and Solutions
+## Problem and Solutions
 
 What are the problems and what we proposed,
 
@@ -26,8 +22,6 @@ What are the problems and what we proposed,
 2. The canvasses activity takes 5-7 days to return back and report the sales to the offices. This is a problem, when the purchasing division trying to re-order the stocks, they should know what stocks is sold as soon as possible. They are already has a strategy for this, but we proposed other options to make the sales staf record the sales as soon as possible.
 3. The moving-stocks between warehouses. When stocks moving from a warehouse to another, it takes 3-4 days (administration, distance, etc) to receive the confirmation. Again, sometimes, the purchasing needs to order new stocks. And we proposed to a single click button to syncronize the stocks on sender and receiver warehouse.
 4. The management needs to know a real-time stocks report whenever, not need to wait the staf to create it first.
-
-# Tech Stuff
 
 ## Tech Stack
 
