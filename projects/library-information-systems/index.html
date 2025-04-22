@@ -61,7 +61,12 @@
     <div class="max-w-screen-xl mx-auto">
         <div class="py-8 lg:py-16 px-4">
             <a href="/projects" class="text-gray-500 hover:underline hover:text-green-700">./kembali</a>
-            <h1 class="text-3xl md:text-4xl font-display mb-4 font-bold text-green-600">Library Information System</h1>
+            <h1 class="text-3xl md:text-4xl font-display font-bold text-green-600">Library Information System</h1>
+            <div class="flex flex-wrap space-x-4">
+                <a class="text-green-500 hover:underline" target="_blank" href="https://demo-perpustakaan.azharisaputra.web.id/">Live mode</a>
+                <a class="text-green-500 hover:underline" target="_blank" href="">Tutorial</a>
+                <a class="text-green-500 hover:underline" target="_blank" href="https://github.com/azharisikumbang/perpustakaan">Github</a>
+            </div>
             <div class="">
               <p>Aplikasi web untuk mengelola sistem perpustakaan dengan menitikberatkan pada ruang lingkup hanya administrator. Memudahkan administrator untuk melakukan tugas-tugas pencatatan data buku, peminjaman, perhitungan denda keterlambatan dan sebagainya.</p>
 <p>Note: Aplikasi tidak mempunyai sistem registrasi untuk pengguna baru (hanya lewat administrator).</p>
@@ -99,13 +104,13 @@
 <pre><code class="language-bash">git clone htttps://github.com/azharisikumbang/perpustakaan
 cd perpustakaan
 
-composer install 
+composer install
 
 # set database config in .env file
 php artisan migrate --seed
 
 # build the front end
-npm install 
+npm install
 npm run dev
 
 # serve the app
