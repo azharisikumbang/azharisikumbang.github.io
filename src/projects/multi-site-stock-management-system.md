@@ -1,7 +1,7 @@
 ---
 title: "Multi Site Stock Management System"
 featured_image: /multi-site-stock-management-system/featured-image.png
-summary: "Era javascript di dunia programming naik begitu cepat, hal ini ditandai dengan munculnya berbagai produk yang menjadikan javascript sebagai…"
+summary: "The project based-on some business use-case from a distributor for seeds and fertilizers company. We covered three main cases, they are manage stocks on multi warehouses (isolated), to track sales canvasses activity and syncronize moving-stock accross warehouses."
 date: 2025-01-18
 tags: projects
 slug: multi-site-stock-management-system
