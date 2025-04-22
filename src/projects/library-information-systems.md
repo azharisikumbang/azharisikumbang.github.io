@@ -24,7 +24,7 @@ Note: Aplikasi tidak mempunyai sistem registrasi untuk pengguna baru (hanya lewa
 - Kesalahan perhitungan denda. Misal, pada saat peminjaman denda adalah Rp 1.000 dan terjadi perubahan pada beberapa minggu berikutnya menjadi ke Rp 2.000, maka potensi kesalahan penerapan denda dapat terjadi.
 - Pembuatan laporan yang lambat dan rumit, apalagi ketika dibutuhkan dalam waktu cepat (kebutuhan kepala perpustakaan).
 
-# Fitur Aplikasi
+## Fitur Aplikasi
 - [x] Authentication and Authorization (role-based)
 - [x] Pengelolaan keanggotaan
 - [x] Penyimpanan buku dengan data DCC, lokasi rak dan lainnya.
@@ -32,7 +32,7 @@ Note: Aplikasi tidak mempunyai sistem registrasi untuk pengguna baru (hanya lewa
 - [x] Konfigurasi jumlah peminjamam, batas peminjaman (hari) dan denda peminjaman (per hari).
 - [x] Laporan excel keanggotaan, buku, peminjaman, pengembalian dan denda (admin and manager)
 
-# Tech Stack
+## Tech Stack
 
 Kebutuhan dasar :
 - PHP >= 8.0
@@ -45,7 +45,7 @@ Tech Stack dari aplikasi :
 - AlpineJS
 - Laravel Excel
 
-# Instalasi
+## Instalasi
 
 ```bash
 git clone htttps://github.com/azharisikumbang/perpustakaan
