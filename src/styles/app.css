@@ -1,6 +1,7 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
-article blockquote {
+/* article blockquote {
   font-style: italic;
   border: thin solid black;
   padding: 1rem;
@@ -47,4 +48,4 @@ ol {
   margin-top: 1em;
   margin-bottom: 1em;
   color: #1d1d1d;
-}
+} */
