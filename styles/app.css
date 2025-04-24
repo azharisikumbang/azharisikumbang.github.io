@@ -680,8 +680,8 @@
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
-  .h-86 {
-    height: calc(var(--spacing) * 86);
+  .h-64 {
+    height: calc(var(--spacing) * 64);
   }
   .h-auto {
     height: auto;
@@ -1284,6 +1284,11 @@
   .xl\:h-64 {
     @media (width >= 80rem) {
       height: calc(var(--spacing) * 64);
+    }
+  }
+  .xl\:h-86 {
+    @media (width >= 80rem) {
+      height: calc(var(--spacing) * 86);
     }
   }
   .xl\:grid-cols-2 {
