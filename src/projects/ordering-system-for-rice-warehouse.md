@@ -1,7 +1,7 @@
 ---
-title: "Ordering system for rice warehouse"
-featured_image: ""
-summary: ""
+title: "Rice Ordering System "
+featured_image: "/rice-ordering-system/welcome-page.png"
+summary: "The application built for manage the ordering for rice for a local warehouses. The warehouse needs to increase the productivity of selling and reporting by log the selling data with modern solutions to replace the old solutions using books."
 date: 2025-01-01
 tags: projects
 stacks:
@@ -12,7 +12,7 @@ stacks:
 slug: travel-ticket-booking-system
 layout: layouts/project.njk
 github: "https://github.com/azharisikumbang/penjualan-beras"
-youtube: ""
+youtube: "#"
 live_demo: "https://demo-toko-beras.azharisaputra.web.id/"
 ---
 
