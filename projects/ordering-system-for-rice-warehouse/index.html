@@ -69,7 +69,96 @@
                 <a class="text-green-500 hover:underline" target="_blank" href="https://github.com/azharisikumbang/penjualan-beras">Github</a>
             </div>
             <div class="">
-              
+              <p>The application built for manage the ordering for rice for a local warehouses. The warehouse needs to increase the productivity of selling and reporting by log the selling data with modern solutions to replace the old solutions using books.</p>
+<p>The old workflow works start with record the daily orders in a single book. The administrator will recap the daily selling manually with calculator and write the result in the book. This process repeat every day, and the final recap is monthly report.</p>
+<p>What wrong with this process? There is no significan wrong with these process, but there are many aspect can be improved to increase the productivities. For example, manual calculation can possibly generate wrong result, even with calculcator, because there are many human factors. Or when the products amount and variant are many, manually do the calculation potentionally generate wrong results.</p>
+<p>So, what we proposed?</p>
+<ol>
+<li>We designed and developed an ordering management system to decrease the possibility for human errors.</li>
+<li>We decreased time spent for manually calculate the daily selling report..</li>
+<li>We generate period-based reports to reduce the time and errors.</li>
+<li>We also add continous users relationship by implementing semi-automated Whatsapp broadcast system to sending the promotions and coupons.</li>
+</ol>
+<h2>Screenshoot</h2>
+<ol>
+<li>
+<p>Welcome page<br>
+Welcome page is using for authenticate before access the systems. A guest user should input username and password. Or if you are not registered yet, got to link <em>&quot;Silahkan Daftar&quot;</em> to register an account.<br>
+<img src="/media/rice-ordering-system/welcome-page.png" alt="Welcome page"></p>
+</li>
+<li>
+<p>Ordering page<br>
+The ordering page will display all of the available rices and variants with the current stocks. You can added the product to cart and define how many (kg) you want to buy. Just click the <em>&quot;Pilih&quot;</em> button and set the amount (kg). And then goto <em>&quot;Pesan Sekarang&quot;</em> to continue the orders.<br>
+<img src="/media/rice-ordering-system/ordering-page.png" alt="Ordering page"></p>
+</li>
+<li>
+<p>Cart and Discount<br>
+This page is for re-confirmation your orders as you can see, all of your orders displayed with the amount you want to buy. You also can change your order amount with tombol <em>&quot;Ubah&quot;</em> and change the amount (kg). Or you can just drop the item by click on button <em>&quot;Hapus&quot;</em>.</p>
+<p>You can also add a coupon promotion on the input on right side and hit <em>&quot;Cek Coupon&quot;</em> to make sure and apply the coupon still valid. If it is valid, it will automatically re-calculate the final price.<br>
+<img src="/media/rice-ordering-system/cart-discount-page.png" alt="Ordering page"></p>
+</li>
+<li>
+<p>Address Confirmation Page<br>
+Just provide the address information to make it is easier when the administrator trying to send the order to you.<br>
+<img src="/media/rice-ordering-system/address-confirmation-page.png" alt="Ordering page"></p>
+</li>
+<li>
+<p>Payment Page<br>
+This page will be the final step, you will provide the transfer receipt to get confirmation by the administrator. You just can do it later if you dont have instant access to your payment.<br>
+<img src="/media/rice-ordering-system/payment-page.png" alt="Ordering page"></p>
+</li>
+<li>
+<p>Order History Page<br>
+After you did the payment (or not), you can see the order history on redirect or on menu <em>&quot;Riwayat Pembelian&quot;</em>. As you can see every fresh ordering needs admin confirmation before it is executed to send.<br>
+<img src="/media/rice-ordering-system/order-history-page.png" alt="Ordering page"></p>
+</li>
+<li>
+<p>Admin Orders Page<br>
+Every orders will be displayed on administrator page on menu <em>&quot;Pesanan Masuk&quot;</em>. We add rich filters to make it easier to display only what you needs. To see the order details just hit <em>&quot;Lihat Detail&quot;</em> button.<br>
+<img src="/media/rice-ordering-system/admin-incoming-orders-page.png" alt="Admin Orders page"></p>
+</li>
+<li>
+<p>Admin Single Order and Confirmation Page<br>
+All of the order's information will be displayed here. You can download the payment receipt to make sure the payment is valid. To process the order just hit <em>&quot;Konfirmasi Pembayaran&quot;</em> to confirm for sending the order or hit <em>&quot;Tolak Pembayaran&quot;</em> to reject the order. Every action will be informed to the customer order window.<br>
+<img src="/media/rice-ordering-system/admin-single-order-history-page.png" alt="Admin Orders page"></p>
+</li>
+<li>
+<p>Order Confirmed Page<br>
+After the administrator confirmed the order, the customer can see the confirmation status in column <em>&quot;Konfirmasi Pembayaran&quot;</em>. There are many status, such as <em>&quot;DITERIMA&quot;</em>, <em>&quot;DITOLAK&quot;</em>, or <em>&quot;PENDING&quot;</em>.<br>
+<img src="/media/rice-ordering-system/order-confirmed-page.png" alt="Admin Orders page"></p>
+</li>
+<li>
+<p>Promotion Page<br>
+You can create a new promo here with auto-generated coupon code, expired date, minimum total price order and the amount or percent of discount (auto-converted).<br>
+<img src="/media/rice-ordering-system/admin-promotion-page.png" alt="Admin Orders page"></p>
+<p>Every members number will be displayed and you can check who ever want to receive the whatsapp message. Start with choose the coupon promo and re-check the coupon information. And then hit <em>&quot;Kirim Pesan&quot;</em> to broadcast the promo to the selected numbers.</p>
+<p><img src="/media/rice-ordering-system/admin-broadcast-promo-page.png" alt="Admin Broadcast page"></p>
+</li>
+</ol>
+<blockquote>
+<p>The whatsapp not working for demo purpose and already disabled cause the feature is not free.</p>
+</blockquote>
+<p>And others, feel free to use the demo link.</p>
+<h2>Tech Stack</h2>
+<p>Tech Stack we used in this projects are,</p>
+<ol>
+<li>PHP 8.0 or newer</li>
+<li>TailwindCSS v3</li>
+<li>AlpineJS</li>
+<li>DomPDF</li>
+</ol>
+<h2>Give a Try</h2>
+<p>Demo Link : <a href="https://demo-toko-beras.azharisaputra.web.id/">https://demo-toko-beras.azharisaputra.web.id/</a></p>
+<pre><code class="language-txt">User Information:
+- Administrator
+  - username : admin
+  - password : admin
+
+- User
+  - username : demouser
+  - password : demouser
+</code></pre>
+
             </div>            
         </div>
     </div>
