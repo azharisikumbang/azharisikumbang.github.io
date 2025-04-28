@@ -12,7 +12,7 @@ eleventyImport:
             <div class="grid xl:grid-cols-3 grid-cols-1 gap-8 mt-8">
                 {% for post in collections.projects %}
                 <div class="p-2 border-1 border-gray-200 hover:cursor-pointer">
-                    <div class="xl:h-86 h-64 overflow-hidden">
+                    <div class="h-64 overflow-hidden">
                         <a href="{{ post.url }}">
                             {% if post.data.featured_image|length %}
                                 <img class="w-full h-auto transition-transform transform hover:scale-110 hover:opacity-80" src="{{ site.url + '/' + site.media_path + '/' + post.data.featured_image}}" alt="{{ post.data.title }}">
