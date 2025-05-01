@@ -5,51 +5,55 @@ layout: base.njk
     <div class="max-w-screen-xl mx-auto">
         <div class="py-8 lg:py-16 px-4">
             <h1 class="text-3xl md:text-4xl font-display mb-4 font-bold text-green-600">./Blog</h1>
-            <div class="px-4 mt-8">
-                {# medium blog #}
-                <h2 class="font-semibold text-2xl">Medium Posts</h2>
-                <ul class="ps-5 mt-2 space-y-1 list-disc list-inside">
-                    
-                {% set mediumCurrentYear = "" %}
-                {% for medium in medium.items %}
-                    {% set postYear = medium.post_year %}
-                    {% if mediumCurrentYear != postYear %}
-                        {% set mediumCurrentYear = postYear %}
-                        <h2 class="mt-4 text-2xl">{{ postYear }}</h2>
-                    {% endif %}
-                    
-                    <li class="pl-6 text-xl">
-                        <a class="hover:text-green-700 hover:underline" href="{{ medium.url }}" target="_blank">{{ medium.title }}</a>
-                        <time datetime="{{ medium.post_fulldate }}">({{ medium.post_date }})</time>
-                    </li>
-                {% endfor %}
-                </ul>
-
-                <h2 class="font-semibold text-2xl">Blog Posts</h2>
-                {# Old blogs #}
-                {% set entries = homepage.data %}
-                {% for entry in entries %}
-                    {% if entry.post_list %}
-                        {% set posts = collections[entry.post_list] %}
-                        {% if posts %}
-                        {% set currentYear = "" %}
-                            <ul class="ps-5 mt-2 space-y-1 list-disc list-inside">
-                                {% for post in posts | reverse %}
-                                    {% set postYear = post.date.getFullYear() %}
-
-                                    {% if currentYear != postYear %}
-                                        {% set currentYear = postYear %}
-                                        <h2 class="mt-4 text-2xl">{{ postYear }}</h2>
-                                    {% endif %}
-                                    <li class="pl-6 text-xl">
-                                        <a class="hover:text-green-700 hover:underline" href="{{ post.url }}">{{ post.data.title }}</a>
-                                        <time datetime="{{ post.date }}">({{ post.date | formatDate }})</time>
-                                    </li>
-                                {% endfor %}
-                            </ul>
+            <div class="px-4 mt-8 grid xl:grid-cols-2 grid-cols-1 gap-4">
+                <div>
+                    {# medium blog #}
+                    <h2 class="font-semibold text-2xl">Medium Posts</h2>
+                    <ul class="ps-5 mt-2 space-y-1 list-disc list-inside">
+                        
+                    {% set mediumCurrentYear = "" %}
+                    {% for medium in medium.items %}
+                        {% set postYear = medium.post_year %}
+                        {% if mediumCurrentYear != postYear %}
+                            {% set mediumCurrentYear = postYear %}
+                            <h2 class="mt-4 text-2xl">{{ postYear }}</h2>
                         {% endif %}
-                    {% endif %}
-                {% endfor %}
+                        
+                        <li class="pl-6 text-xl">
+                            <a class="hover:text-green-700 hover:underline" href="{{ medium.url }}" target="_blank">{{ medium.title }}</a>
+                            <time datetime="{{ medium.post_fulldate }}">({{ medium.post_date }})</time>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="font-semibold text-2xl">Blog Posts</h2>
+                    {# Old blogs #}
+                    {% set entries = homepage.data %}
+                    {% for entry in entries %}
+                        {% if entry.post_list %}
+                            {% set posts = collections[entry.post_list] %}
+                            {% if posts %}
+                            {% set currentYear = "" %}
+                                <ul class="ps-5 mt-2 space-y-1 list-disc list-inside">
+                                    {% for post in posts | reverse %}
+                                        {% set postYear = post.date.getFullYear() %}
+    
+                                        {% if currentYear != postYear %}
+                                            {% set currentYear = postYear %}
+                                            <h2 class="mt-4 text-2xl">{{ postYear }}</h2>
+                                        {% endif %}
+                                        <li class="pl-6 text-xl">
+                                            <a class="hover:text-green-700 hover:underline" href="{{ post.url }}">{{ post.data.title }}</a>
+                                            <time datetime="{{ post.date }}">({{ post.date | formatDate }})</time>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
