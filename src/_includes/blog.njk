@@ -19,7 +19,7 @@ layout: base.njk
                             <h2 class="mt-4 text-2xl">{{ postYear }}</h2>
                         {% endif %}
                         
-                        <li class="pl-6 text-xl">
+                        <li class="pl-6 text-lg">
                             <a class="hover:text-green-700 hover:underline" href="{{ medium.url }}" target="_blank">{{ medium.title }}</a>
                             <time datetime="{{ medium.post_fulldate }}">({{ medium.post_date }})</time>
                         </li>
@@ -44,7 +44,7 @@ layout: base.njk
                                             {% set currentYear = postYear %}
                                             <h2 class="mt-4 text-2xl">{{ postYear }}</h2>
                                         {% endif %}
-                                        <li class="pl-6 text-xl">
+                                        <li class="pl-6 text-lg">
                                             <a class="hover:text-green-700 hover:underline" href="{{ post.url }}">{{ post.data.title }}</a>
                                             <time datetime="{{ post.date }}">({{ post.date | formatDate }})</time>
                                         </li>
