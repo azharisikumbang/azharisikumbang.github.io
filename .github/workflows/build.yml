@@ -32,11 +32,11 @@ jobs:
           publish_dir: ./_site
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Upload to self hosted server
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.REMOTE_HOST }}
-          username: ${{ secrets.REMOTE_USER }}
-          password: ${{ secrets.REMOTE_PASSWORD }}
-          local-dir: "_site/"
-          server-dir: "${{ secrets.REMOTE_DIR }}"
+#      - name: Upload to self hosted server
+#        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+#        with:
+#          server: ${{ secrets.REMOTE_HOST }}
+#          username: ${{ secrets.REMOTE_USER }}
+#          password: ${{ secrets.REMOTE_PASSWORD }}
+#          local-dir: "_site/"
+#          server-dir: "${{ secrets.REMOTE_DIR }}"
