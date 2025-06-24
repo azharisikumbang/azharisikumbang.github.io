@@ -34,7 +34,7 @@ jobs:
 
       - name: Add CNAME file
         run: | 
-          echo "azharisaputra.web.id" > CNAME
+          echo "azharisaputra.web.id" > ./_site/CNAME
 
 #      - name: Upload to self hosted server
 #        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
