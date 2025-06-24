@@ -32,6 +32,10 @@ jobs:
           publish_dir: ./_site
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Add CNAME file
+        run: | 
+          echo "azharisaputra.web.id" > CNAME
+
 #      - name: Upload to self hosted server
 #        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
 #        with:
