@@ -3,6 +3,7 @@ const markdownIt = require("markdown-it");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/media");
+  eleventyConfig.addPassthroughCopy("CNAME");
 
   eleventyConfig.addFilter("formatDate", (dateObj) => {
     return `${dateObj.getDate()}\/${dateObj.getMonth() + 1}`;
