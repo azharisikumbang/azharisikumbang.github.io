@@ -1,34 +1,26 @@
-# 11ty-no-style-please
-A minimalist blog template for the [eleventy](https://www.11ty.dev/) static site generator. 
-Inspired by [no-style-please](https://github.com/riggraz/no-style-please).
-It has [Netlify CMS](https://www.netlifycms.org/) built in and can deploy to [Netlify](https://www.netlify.com/) in one click so you can start writing posts right away.
-
+# azharisaputra.web.id
+Just a personal blog to write, nothing specials. It build on top of eleventy with theme based on [no-style-please](https://github.com/riggraz/no-style-please) theme, which is an amazing theme.
 ---
 
 ![Site Screenshot](/site-screenshot.png)
-## [Check out the demo page](https://11ty-no-style-please.netlify.app/)
+## [Check out the page](https://azharisikumbang.github.io/)
 
 # Features
 - Simple design
 - Fast, minimal amount of CSS to download
 - Pre-configured CMS
 - Easy to use and deploy
-- Fully responsive
+- Fully responsive (I hope)
+- Blog pages
+- Project pages
+- Medium Pages (nah, just a bunch of links in json)
 
 # Usage
-The simplest way to use this template is to deploy it on Netlify using this button:
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/stopnoanime/11ty-no-style-please&stack=cms)
-
-After deploying it to Netlify, you will be invited to join the CMS by email. 
-After accepting the invite and setting a password you can start change the site's settings, and creating posts from within the CMS.
-
----
-You can also run eleventy locally and then deploy it manually:
-
+Test locally,
 ### 1. Clone the repository ( or use it as a template then clone )
 
-`git clone https://github.com/stopnoanime/11ty-no-style-please`
+`git clone https://github.com/azharisikumbang/azharisikumbang.github.io.git`
 
 ### 2. Install the required packages
 
@@ -44,7 +36,7 @@ You can also run eleventy locally and then deploy it manually:
 
 ### 5. Deploy the site
 
-You can either connect your repository to Netlify to enable automatic deploy (recommended), or manually copy the site files from `_site` to them.
+Setup github actions to build it (please check the workflows, I don't maintain it frequently), or manually copy the site files from `_site` to them.
 
 # Configuration
 All configuration can be easily changed from within the Netlify CMS at `SITE_URL/admin`.
@@ -66,33 +58,33 @@ url: site url, used in Netlify CMS
 ```
 title: homepage title
 subtitle: text to show under homepage title
-menu: The menu object, configures how the menu looks
+data: 
+  - post_list    : default posts lists
+  - project_list : just eleventy collections names (check add elventy config .eleventy.js)
 ```
 
-### - The menu object
-It should be an array of entires, each entry has the following parameters:
+### - project.json
 ```
-title: entry title
-url: if set, the entry is a link pointing to this url
-post_list: accepts a string, if set, the entry will show a nested list of all posts with the tag that post_list is set to
-entries: an nested array of entries with the same available parameters
+- title: page title
+- items: 
+  - title : Your project main title
+  - description: displayed on projects page as card description
+  - demo_url: your link demo
+  - github_url: github url
 ```
 
-For example use, look at the default menu object
+### - medium.json
 ```
-"menu": [
-    {
-        "title": "read more here",
-        "entries": [
-            {
-                "title": "github",
-                "url": "http://github.com/stopnoanime/11ty-no-style-please"
-            }
-        ]
-    },
-    {
-        "title": "all posts with the 'post' tag",
-        "post_list": "post"
-    }
-]
+- url: your medium profile url
+- items:
+  - title: the medium post title that displayed on the page
+  - url: where people read your post
+  - post_date: date of post (month/day)
+  - post_year: year of post (I just used it for grouping)
+  - post_fulldate: full date of post
+  - summary: displayed on blog card on home page
 ```
+
+### - the resume /cv link
+
+Upload yours on this path `media/resume.pdf`
