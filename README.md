@@ -1,5 +1,7 @@
 # azharisaputra.web.id
-Just a personal blog to write, nothing specials. It build on top of eleventy with theme based on [no-style-please](https://github.com/riggraz/no-style-please) theme, which is an amazing theme.
+
+Just a personal blog, a place to write. It build on top of eleventy with theme based on [no-style-please](https://github.com/riggraz/no-style-please) theme, which is an amazing theme.
+
 ---
 
 ![Site Screenshot](/site-screenshot.png)
